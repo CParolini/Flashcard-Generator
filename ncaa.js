@@ -1,7 +1,7 @@
 console.log("These are NCAA cards!");
 exports.clozeQuestions = [{
-    text: "Which college football program has the most wins and how many?",
-    cloze: "Michigan with 915"
+    text: "Which college football program has the most wins?",
+    cloze: "Michigan"
 }, {
     text: "Which team has had the most players drafted in the first round of the NFL?",
     cloze: "USC"
@@ -13,5 +13,5 @@ exports.clozeQuestions = [{
     cloze: "Nebraska"
 }, {
     text: "Which school has one the most Heisman Trophies?",
-    cloze: "Notre Dame and Ohio State"
+    cloze: "Notre Dame"
 }];

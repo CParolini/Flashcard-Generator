@@ -7,3 +7,6 @@ var fs = require("fs");
 //Load question files
 var basicCard = require("./nfl.js");
 var clozeCard = require("./ncaa.js");
+
+var count = 0;
+var score = 0;

@@ -9,9 +9,9 @@ exports.basicQuestions = [{
     front: "In what year did the AFL and NFL merge?",
     back: "1970"
 }, {
-    front: "What NFL team has won the most Super Bowls and how many?",
-    back: "Pittsburgh Steelers with 6"
+    front: "What NFL team has won the most Super Bowls?",
+    back: "Steelers"
 }, {
-    front: "Who is the oldest living NFL player and how old is he?",
-    back: "Clarence 'Ace' Parker at 105 years old"
+    front: "Who is the oldest living NFL player?",
+    back: "Clarence 'Ace' Parker"
 }];
