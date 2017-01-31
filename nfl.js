@@ -1,4 +1,4 @@
-console.log("These are NFL cards!");
+// console.log("These are NFL cards!");
 exports.basicQuestions = [{
     front: "Who was the coach of the Green Bay Packers who won 4 championship and whose name would eventually be used to name to Super Bowl Trophy?",
     back: "Vince Lombardi"

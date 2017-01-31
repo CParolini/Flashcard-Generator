@@ -1,4 +1,4 @@
-console.log("These are NCAA cards!");
+// console.log("These are NCAA cards!");
 exports.clozeQuestions = [{
     text: "Which college football program has the most wins?",
     cloze: "Michigan"
