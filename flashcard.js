@@ -13,7 +13,7 @@ var score = 0;
 
 startgame();
 
-function askCloze() {
+function cloze() {
   if (count < clozeCard.clozeQuestions.length) {
     inquirer.prompt([{
       name: "input",
@@ -26,7 +26,7 @@ function askCloze() {
         console.log("Nope, the answer is " + clozeCard.clozeQuestions[count].cloze);
       }
       count++;
-      askCloze();
+      cloze();
     });
   } else {
 
@@ -36,7 +36,7 @@ function askCloze() {
       inquirer.prompt([{
         type: "list",
         name: "game",
-        message: "Your Score was " + score + " answers correct\n  Would you like to try again?",
+        message: "Your Score was " + score + " answers correct\n  Go again?",
         choices: ["Yes", "No"]
       }]).then(function (answer) {
         if (answer.game === true) {
@@ -50,7 +50,7 @@ function askCloze() {
   }
 }
 
-function askQuestion() {
+function question() {
 
     if (count < basicCard.basicQuestions.length) {
         inquirer.prompt([{
@@ -64,7 +64,7 @@ function askQuestion() {
                 console.log("Sorry, the correct answer is " + basicCard.basicQuestions[count].back + " Current score = " + score);
             }
             count++;
-            askQuestion();
+            question();
         });
     } else {
         var gameOver = true;
@@ -73,7 +73,7 @@ function askQuestion() {
             inquirer.prompt([{
                 type: "list",
                 name: "game",
-                message: "Your Score was " + score + " answers correct\n  Would you like to try again?",
+                message: "Your Score was " + score + " answers correct\n  Go again?",
                 choices: ["Yes", "No"]
             }]).then(function(answer) {
                 if (answer.game === "Yes") {
@@ -92,14 +92,14 @@ function startgame() {
     score = 0;
     inquirer.prompt([{
         type: "list",
-        message: "Choose from the Following:",
+        message: "Choose one of the following:",
         choices: ["Basic", "Cloze"],
         name: "chooseType"
     }]).then(function(answers) {
         if (answers.chooseType === "Basic") {
-            askQuestion();
+            question();
         } else {
-            askCloze();
+            cloze();
         }
     });
 }
